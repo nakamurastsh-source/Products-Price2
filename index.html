@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>価格台帳</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,8 @@
     --radius:4px;
   }
   *{box-sizing:border-box;}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans JP', sans-serif;-webkit-font-smoothing:antialiased;}
+  html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans JP', sans-serif;-webkit-font-smoothing:antialiased;touch-action:manipulation;}
   .mono{font-family:'JetBrains Mono', monospace;}
   .display{font-family:'Shippori Mincho', serif;}
 
@@ -53,7 +54,7 @@
   .layout{display:flex;max-width:1100px;margin:0 auto;gap:24px;padding:24px 28px 56px;align-items:flex-start;}
   .sidebar{width:280px;flex-shrink:0;position:sticky;top:120px;max-height:calc(100vh - 144px);overflow-y:auto;border:1px solid var(--line-strong);border-radius:var(--radius);background:var(--paper);}
   .sidebar-filter{padding:10px 12px;border-bottom:1px solid var(--line);}
-  .sidebar-filter select{width:100%;border:1px solid var(--line-strong);border-radius:var(--radius);padding:7px 8px;font-size:12.5px;background:#fff;color:var(--ink);}
+  .sidebar-filter select{width:100%;border:1px solid var(--line-strong);border-radius:var(--radius);padding:7px 8px;font-size:16px;background:#fff;color:var(--ink);}
   .cat-head{padding:9px 14px 5px;font-size:11px;color:var(--ink-soft);letter-spacing:.04em;background:var(--paper-deep);border-bottom:1px solid var(--line);}
   .product-item{display:flex;gap:10px;align-items:center;cursor:pointer;padding:11px 14px;border-bottom:1px solid var(--line);border-left:3px solid transparent;transition:background .12s,border-color .12s;}
   .product-item:hover{background:var(--paper-deep);}
@@ -97,8 +98,8 @@
   .entry-form{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-end;background:var(--paper-deep);border:1px solid var(--line);border-radius:var(--radius);padding:14px;margin-bottom:22px;}
   .field{display:flex;flex-direction:column;gap:4px;}
   .field label{font-size:11px;color:var(--ink-soft);letter-spacing:.03em;}
-  .field input,.field select{border:1px solid var(--line-strong);border-radius:var(--radius);padding:8px 9px;font-size:13px;font-family:'Noto Sans JP',sans-serif;background:#fff;min-width:0;}
-  .field input[type="file"]{padding:6px 8px;font-size:12px;}
+  .field input,.field select{border:1px solid var(--line-strong);border-radius:var(--radius);padding:8px 9px;font-size:16px;font-family:'Noto Sans JP',sans-serif;background:#fff;min-width:0;}
+  .field input[type="file"]{padding:6px 8px;font-size:14px;}
   .field input:focus-visible,.field select:focus-visible{outline:2px solid var(--indigo-soft);outline-offset:1px;}
   .field.date input{width:124px;font-family:'JetBrains Mono',monospace;}
   .field.maker input{width:130px;}
@@ -106,8 +107,8 @@
   .field-duo{display:flex;flex-direction:column;gap:4px;}
   .field-duo label{font-size:11px;color:var(--ink-soft);letter-spacing:.03em;}
   .field-duo .row{display:flex;gap:5px;}
-  .field-duo input{width:74px;font-family:'JetBrains Mono',monospace;}
-  .field-duo select{width:62px;padding:8px 4px;}
+  .field-duo input{width:74px;font-family:'JetBrains Mono',monospace;font-size:16px;border:1px solid var(--line-strong);border-radius:var(--radius);padding:8px 9px;background:#fff;}
+  .field-duo select{width:70px;padding:8px 4px;font-size:16px;border:1px solid var(--line-strong);border-radius:var(--radius);background:#fff;}
   .field.price input{width:96px;font-family:'JetBrains Mono',monospace;}
 
   .entries-title{font-size:12px;color:var(--ink-soft);letter-spacing:.04em;margin:0 0 8px;}
